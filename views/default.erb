@@ -2,9 +2,29 @@
 <title>Sinatra Songs</title>
 </head>
 <body>
+  <style>
+    body {
+      background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTk3_pYWsL9Gf_aZ09G2CLM8WxSc0fRsaeRq2JBlvU6fyRzCSY");
+      background-repeat: repeat;
+       background-size: 100%;
+    }
+    h1{
+      margin-left: 40px;
+      color: CornflowerBlue;
+    }
+    h3 {
+      color: Maroon;
+      margin-left: 30px;
+      text-decoration: underline;
+    }
+  </style>
 <h1>Sinatra Songs</h1>
-<% @songs.each do |song| %>
-    <h3> <%= song[:title] %></h3>
-    <p> <a href="<%=song[:url]%>"> Video </a></p>
-<% end %>
+<ol>
+  <% @songs.each do |song| %>
+      <li><h3> <%= song[:title] %></h3></li>
+      <p> <a href="<%=song[:url]%>"> Video </a></p>
+  <% end %>
+
+</ol>
+
 </body>
